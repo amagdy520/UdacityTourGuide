@@ -18,10 +18,10 @@ import java.util.ArrayList;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Giza extends Fragment {
+public class GizaFragment extends Fragment {
 
 
-    public Giza() {
+    public GizaFragment() {
         // Required empty public constructor
     }
 
@@ -58,9 +58,9 @@ public class Giza extends Fragment {
         mukhtarMuseum.setLongitude(31.2130);
         place.add(new Place(R.string.mukhtar_museum, R.string.mukhtar_museum_location, R.drawable.mukhtarmuseum, mukhtarMuseum));
 
-        final placeAdpter placeAdpter = new placeAdpter(getActivity(), place);
+        final PlacesAdapter mPlacesAdapter = new PlacesAdapter(getActivity(), place);
         ListView listView = (ListView) rootView.findViewById(R.id.list);
-        listView.setAdapter(placeAdpter);
+        listView.setAdapter(mPlacesAdapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

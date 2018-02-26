@@ -13,8 +13,8 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class Alex extends Fragment {
-    public Alex() {
+public class AlexFragment extends Fragment {
+    public AlexFragment() {
         // Required empty public constructor
     }
 
@@ -50,9 +50,9 @@ public class Alex extends Fragment {
         elMontazah.setLongitude(29.924526);
         place.add(new Place(R.string.el_montazah, R.string.el_montazah_location, R.drawable.elmontazah, elMontazah));
 
-        final placeAdpter placeAdpter = new placeAdpter(getActivity(), place);
+        final PlacesAdapter mPlacesAdapter = new PlacesAdapter(getActivity(), place);
         ListView listView = (ListView) rootView.findViewById(R.id.list);
-        listView.setAdapter(placeAdpter);
+        listView.setAdapter(mPlacesAdapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

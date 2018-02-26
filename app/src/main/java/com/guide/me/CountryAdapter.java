@@ -19,13 +19,13 @@ public class CountryAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
 
         if (position == 0)
-            return new Cairo();
+            return new CairoFragment();
         else if (position == 1)
-            return new Luxor();
+            return new LuxorFragment();
         else if (position == 2)
-            return new Alex();
+            return new AlexFragment();
         else
-            return new Giza();
+            return new GizaFragment();
 
     }
 

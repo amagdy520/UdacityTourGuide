@@ -15,10 +15,10 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 
-public class Cairo extends Fragment {
+public class CairoFragment extends Fragment {
 
 
-    public Cairo() {
+    public CairoFragment() {
         // Required empty public constructor
     }
 
@@ -54,9 +54,9 @@ public class Cairo extends Fragment {
         museumofIslamicArt.setLongitude(31.2524);
         place.add(new Place(R.string.museum_of_islamicart, R.string.museum_of_islamicart_location, R.drawable.museumofislamicart, museumofIslamicArt));
 
-        final placeAdpter placeAdpter = new placeAdpter(getActivity(), place);
+        final PlacesAdapter mPlacesAdapter = new PlacesAdapter(getActivity(), place);
         ListView listView = (ListView) rootView.findViewById(R.id.list);
-        listView.setAdapter(placeAdpter);
+        listView.setAdapter(mPlacesAdapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

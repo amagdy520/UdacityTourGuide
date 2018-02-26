@@ -11,9 +11,9 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 
-public class placeAdpter extends ArrayAdapter<Place> {
+public class PlacesAdapter extends ArrayAdapter<Place> {
 
-    public placeAdpter(Context context, ArrayList<Place> Places) {
+    public PlacesAdapter(Context context, ArrayList<Place> Places) {
 
         super(context, 0, Places);
     }

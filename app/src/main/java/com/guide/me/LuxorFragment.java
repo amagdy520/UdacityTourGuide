@@ -18,10 +18,10 @@ import java.util.ArrayList;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Luxor extends Fragment {
+public class LuxorFragment extends Fragment {
 
 
-    public Luxor() {
+    public LuxorFragment() {
         // Required empty public constructor
     }
 
@@ -57,9 +57,9 @@ public class Luxor extends Fragment {
         greatHypostyleHall.setLongitude(32.6579);
         place.add(new Place(R.string.great_hypostyleh_hall, R.string.great_hypostyleh_hall_location, R.drawable.greathypostylehall, greatHypostyleHall));
 
-        final placeAdpter placeAdpter = new placeAdpter(getActivity(), place);
+        final PlacesAdapter mPlacesAdapter = new PlacesAdapter(getActivity(), place);
         ListView listView = (ListView) rootView.findViewById(R.id.list);
-        listView.setAdapter(placeAdpter);
+        listView.setAdapter(mPlacesAdapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
